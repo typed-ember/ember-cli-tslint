@@ -79,6 +79,37 @@ describe('Acceptance: install ember-cli-tslint', function() {
       });
   });
 
+  it('keeps the ESLint addon if it should', function() {
+    var args = ['ember-cli-tslint', 'foo'];
+
+    td.when(prompt(td.matchers.anything())).thenResolve({ deleteDependency: 'keep' });
+
+    return emberNew()
+      .then(function() {
+        fs.ensureFileSync('.eslintrc.js');
+        fs.ensureFileSync('tests/.eslintrc.js');
+
+        modifyPackages([
+          { name: 'ember-cli-eslint', dev: true }
+        ]);
+
+        expect(file('package.json')).to.contain('ember-cli-eslint');
+        expect(file('.eslintrc.js')).to.exist;
+        expect(file('tests/.eslintrc.js')).to.exist;
+      })
+      .then(function() {
+        return emberGenerate(args);
+      })
+      .then(function() {
+        // verify that the ESLint dependency was not removed
+        expect(file('package.json')).to.contain('ember-cli-eslint');
+
+        // verify that the ESLint config file were not deleted
+        expect(file('.eslintrc.js')).to.exist;
+        expect(file('tests/.eslintrc.js')).to.exist;
+      });
+  });
+
   it('Does not touch foreign .eslintrc.js files', function() {
     var args = ['ember-cli-tslint', 'foo'];
     var foreignESLintrcPaths = [

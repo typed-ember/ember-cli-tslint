@@ -34,17 +34,32 @@ module.exports = {
 
   afterInstall() {
     var removeESLintDep;
+    var ui = this.ui;
     if (this.removePackageFromProject && 'ember-cli-eslint' in this.project.dependencies()) {
-      removeESLintDep = this.removePackageFromProject('ember-cli-eslint');
+      ui.writeLine('\nember-cli-eslint was found:');
+      removeESLintDep = ui.prompt({
+        type: 'list',
+        name: 'deleteDependency',
+        message: 'What would you like to do?',
+        choices: [
+          { name: 'Remove it', value: 'remove' },
+          { name: 'Keep it', value: 'keep' }
+        ]
+      }).then((result) => {
+        if (result.deleteDependency === 'keep') {
+          return Promise.resolve();
+        }
+
+        return this.removePackageFromProject('ember-cli-eslint').then(() => {
+          return this._removeESLintConfig();
+        });
+      });
     } else {
       removeESLintDep = Promise.resolve();
     }
 
-    var removeESLintConfig = this._removeESLintConfig.bind(this);
 
-    return removeESLintDep.then(function() {
-      return removeESLintConfig();
-    });
+    return removeESLintDep;
   },
 
     /**
