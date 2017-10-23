@@ -26,6 +26,12 @@ function synchronize(items, cb) {
 module.exports = {
   name: 'ember-cli-tslint',
 
+  normalizeEntityName() {
+    // this prevents an error when the entityName is
+    // not specified (since that doesn't actually matter
+    // to us
+  },
+
   afterInstall() {
     var removeESLintDep;
     if (this.removePackageFromProject && 'ember-cli-eslint' in this.project.dependencies()) {
