@@ -1,5 +1,7 @@
 # ember-cli-tslint
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/t-sauer/ember-cli-tslint.svg)](https://greenkeeper.io/)
+
 [TSLint](https://palantir.github.io/tslint/) for [Ember CLI](https://ember-cli.com/) apps and addons
 
 ## Installation
