@@ -1,6 +1,9 @@
 /* eslint-env node */
 'use strict';
 
+const TSLint = require('broccoli-tslinter');
+const Funnel = require('broccoli-funnel');
+
 module.exports = {
   name: 'ember-cli-tslint',
 
@@ -9,10 +12,9 @@ module.exports = {
       return undefined;
     }
 
-    const TSLint = require('broccoli-tslinter');
-
-
-    return new TSLint(tree, {
-    });
+    return new TSLint(
+      new Funnel(tree, { include: ['**/*.ts'] }),
+      {}
+    );
   }
 };
