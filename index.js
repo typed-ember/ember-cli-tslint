@@ -1,9 +1,6 @@
 /* eslint-env node */
 'use strict';
 
-const TSLint = require('broccoli-tslinter');
-const Funnel = require('broccoli-funnel');
-
 module.exports = {
   name: 'ember-cli-tslint',
 
@@ -11,6 +8,10 @@ module.exports = {
     if (type === 'templates') {
       return undefined;
     }
+
+    // NOTE: intentionally inlined to improve ember-cli startup performance.
+    const TSLint = require('broccoli-tslinter');
+    const Funnel = require('broccoli-funnel');
 
     return new TSLint(
       new Funnel(tree, { include: ['**/*.ts'] }),
