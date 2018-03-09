@@ -9,10 +9,13 @@ module.exports = {
       return undefined;
     }
 
+    // NOTE: intentionally inlined to improve ember-cli startup performance.
     const TSLint = require('broccoli-tslinter');
+    const Funnel = require('broccoli-funnel');
 
-
-    return new TSLint(tree, {
-    });
+    return new TSLint(
+      new Funnel(tree, { include: ['**/*.ts'] }),
+      {}
+    );
   }
 };
