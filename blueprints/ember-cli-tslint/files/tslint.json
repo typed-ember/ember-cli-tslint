@@ -3,7 +3,15 @@
   "extends": [
       "tslint:recommended"
   ],
-  "jsRules": {},
-  "rules": {},
+  "jsRules": {
+    "variable-name": {
+      "options": ["allow-leading-underscore"]
+    }
+  },
+  "rules": {
+    "variable-name": {
+      "options": ["allow-leading-underscore"]
+    }
+  },
   "rulesDirectory": []
 }
