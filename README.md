@@ -16,6 +16,18 @@ ember install ember-cli-tslint
 
 TSLint will be run by `ember-cli-qunit` automatically when you run `ember test`. `ember-cli-mocha` is not yet supported.
 
+### Config
+You can pass [broccoli-tslinter](https://github.com/kratiahuja/broccoli-tslinter) options in `ember-cli-build.js` like this:
+
+```javascript
+module.exports = function(defaults) {
+  var app = new EmberApp(defaults, {
+    'ember-cli-tslint': {
+      configuration: 'config/tslint.json'
+    }
+  });
+````
+
 ## Contributing
 
 ### Installation
