@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/typed-ember/ember-cli-tslint.svg?branch=master)](https://travis-ci.org/typed-ember/ember-cli-tslint)
 [![Build Status](https://dev.azure.com/typed-ember/ember-cli-typescript/_apis/build/status/typed-ember.ember-cli-tslint)](https://dev.azure.com/typed-ember/ember-cli-typescript/_build/latest?definitionId=3)
-[![Greenkeeper badge](https://badges.greenkeeper.io/t-sauer/ember-cli-tslint.svg)](https://greenkeeper.io/)
 
 [TSLint](https://palantir.github.io/tslint/) for [Ember CLI](https://ember-cli.com/) apps and addons
 
