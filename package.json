@@ -33,12 +33,12 @@
     "walk-sync": "^0.3.2"
   },
   "devDependencies": {
-    "@typed-ember/renovate-config": "^1.1.0",
+    "@typed-ember/renovate-config": "1.1.0",
     "broccoli-asset-rev": "2.6.0",
-    "chai": "^4.1.2",
+    "chai": "4.1.2",
     "ember-cli": "2.17.1",
     "ember-cli-babel": "6.11.0",
-    "ember-cli-blueprint-test-helpers": "^0.18.3",
+    "ember-cli-blueprint-test-helpers": "0.18.3",
     "ember-cli-dependency-checker": "2.1.0",
     "ember-cli-eslint": "4.2.3",
     "ember-cli-htmlbars": "2.0.3",
@@ -53,9 +53,9 @@
     "ember-load-initializers": "1.0.0",
     "ember-resolver": "4.5.0",
     "ember-source": "2.17.0",
-    "ember-welcome-page": "^3.0.0",
+    "ember-welcome-page": "3.1.1",
     "loader.js": "4.7.0",
-    "mocha": "^4.0.1",
+    "mocha": "4.0.1",
     "typescript": "^2.4.2"
   },
   "engines": {
