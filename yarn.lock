@@ -23,6 +23,11 @@
   dependencies:
     "@glimmer/di" "^0.2.0"
 
+"@typed-ember/renovate-config@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@typed-ember/renovate-config/-/renovate-config-1.1.0.tgz#813687da7c6696f36f83a1e9c96ca02deede108b"
+  integrity sha512-wGmOPpI7J6cvQPoMJvosUkDcnq/JDsLexPvjXHunp2XKYo/p+wn2MFtkdMD2Uf9LUqCWjLS/zV3uVVW3Zj4Tow==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
