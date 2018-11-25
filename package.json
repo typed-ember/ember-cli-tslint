@@ -33,7 +33,7 @@
     "walk-sync": "^0.3.2"
   },
   "devDependencies": {
-    "@typed-ember/renovate-config": "1.2.0",
+    "@typed-ember/renovate-config": "1.2.1",
     "broccoli-asset-rev": "3.0.0",
     "chai": "4.2.0",
     "ember-cli": "3.5.1",
