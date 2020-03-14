@@ -29,7 +29,7 @@
     "broccoli-funnel": "^2.0.1",
     "broccoli-tslinter": "^3.0.1",
     "rsvp": "^4.7.0",
-    "tslint": "^5.5.0",
+    "tslint": "^6.0.0",
     "walk-sync": "^1.0.0"
   },
   "devDependencies": {
