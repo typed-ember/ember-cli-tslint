@@ -1,3 +1,7 @@
+# 🛑 ARCHIVED, please use ESLint instead 🛑
+
+---
+
 # ember-cli-tslint
 
 [![Build Status](https://travis-ci.org/typed-ember/ember-cli-tslint.svg?branch=master)](https://travis-ci.org/typed-ember/ember-cli-tslint)
